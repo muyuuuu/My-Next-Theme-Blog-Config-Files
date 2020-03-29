@@ -27,7 +27,7 @@ custom_file_path:
   #header: source/_data/header.swig
   #sidebar: source/_data/sidebar.swig
   postMeta: source/_data/post-meta.swig
-  # postBodyEnd: source/_data/post-body-end.swig
+  postBodyEnd: source/_data/post-body-end.swig
   footer: source/_data/footer.swig
   # bodyEnd: source/_data/body-end.swig
   variable: source/_data/variables.styl
@@ -270,7 +270,7 @@ reward_settings:
   # If true, reward would be displayed in every article by default.
   enable: true
   animation: false
-  comment: 明人不说暗话，如果你感觉我写的还可以对你有帮助的话，Could you buy me a yogurt？ 如果这样不行的话，我，秦始皇，打钱。
+  comment: 明人不说暗话，如果你感觉我写的还可以对你有帮助的话，Could you buy me a yogurt？ ，文末也可评分。如果这样不行的话，我，秦始皇，打钱。
 
 reward:
   wechatpay: /images/wechatpay.jpg
@@ -361,14 +361,14 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: night
+  highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
     enable: true
     # Show text copy result.
     show_result: true
     # Available values: default | flat | mac
-    style: flat
+    style: mac
 
 back2top:
   enable: true
@@ -519,7 +519,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: true
+pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -643,8 +643,8 @@ gitalk:
   enable: true
   github_id: muyuuuu
   repo: blabla
-  client_id: 5
-  client_secret: 0  
+  client_id: 639ddab88527bca5fe75
+  client_secret: 0c08625a06e8796096a190cad5c07b4909d1e960  
   admin_user: muyuuuu  
   distraction_free_mode: true 
   # Gitalk's display language depends on user's browser or system environment
@@ -661,8 +661,8 @@ gitalk:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: false
-  id:     # <app_id>
+  enable: true
+  id:     24077
   color:  fc6423
 
 # AddThis Share. See: https://www.addthis.com
@@ -911,7 +911,7 @@ vendors:
   copy_tex_css:
 
   # Internal version: 0.2.8
-  pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
+  # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
   # pjax:
 
   # FancyBox
