@@ -126,7 +126,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  books: /books/ || book
+  share: /share/ || share
   message: /message/ || list
   friends: /friends/ || link
   reward: /reward/ || history
@@ -270,7 +270,7 @@ reward_settings:
   # If true, reward would be displayed in every article by default.
   enable: true
   animation: false
-  comment: 明人不说暗话，如果你感觉我写的还可以对你有帮助的话，Could you buy me a yogurt？ ，文末也可评分。如果这样不行的话，我，秦始皇，打钱。
+  comment: 明人不说暗话，如果你感觉我写的还可以对你有帮助的话，Could you buy me a yogurt？文末也可评分。如果这样不行的话，我，秦始皇，打钱。
 
 reward:
   wechatpay: /images/wechatpay.jpg
@@ -519,7 +519,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -804,7 +804,7 @@ note:
 # Tabs tag
 tabs:
   transition:
-    tabs: false
+    tabs: true
     labels: true
 
 # PDF tag
@@ -911,7 +911,7 @@ vendors:
   copy_tex_css:
 
   # Internal version: 0.2.8
-  # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
+  pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
   # pjax:
 
   # FancyBox
