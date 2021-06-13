@@ -23,10 +23,10 @@ minify: true
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
   # images: source/_data/images/
-  #head: source/_data/head.swig
-  #header: source/_data/header.swig
-  #sidebar: source/_data/sidebar.swig
-  postMeta: source/_data/post-meta.swig
+  # head: source/_data/head.swig
+  header: source/_data/header.swig
+  sidebar: source/_data/sidebar.swig
+  # postMeta: source/_data/post-meta.swig
   postBodyEnd: source/_data/post-body-end.swig
   footer: source/_data/footer.swig
   # bodyEnd: source/_data/body-end.swig
@@ -118,19 +118,20 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  archives: /archives/ || archive
-  categories: /categories/ || image
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-image
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  share: /share/ || share
-  message: /message/ || list
-  friends: /friends/ || link
-  reward: /reward/ || history
-  hot: /hot/ || fire
+  share: /share/ || fa fa-share
+  message: /message/ || fa fa-list
+  friends: /friends/ || fa fa-link
+  reward: /reward/ || fa fa-history
+  hot: /hot/ || fa fa-fire
+  record: /record/ || fa fa-sticky-note
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -270,7 +271,8 @@ reward_settings:
   # If true, reward would be displayed in every article by default.
   enable: true
   animation: false
-  comment: 明人不说暗话，如果你感觉我写的还可以对你有帮助的话，Could you buy me a yogurt？文末也可评分。如果这样不行的话，我，秦始皇，打钱。
+  comment: "明人不说暗话，如果感觉这篇文章还不错，您的打赏是对我读书路上莫大的支持，当然一切全凭自愿。
+  实在不行，我，秦始皇，打钱。"
 
 reward:
   wechatpay: /images/wechatpay.jpg
@@ -368,7 +370,7 @@ codeblock:
     # Show text copy result.
     show_result: true
     # Available values: default | flat | mac
-    style: mac
+    style: default
 
 back2top:
   enable: true
@@ -445,7 +447,7 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: EB Garamond
+    family: 'Source Han Sans CN'
 
   # Font settings for <code> and code blocks.
   codes:
@@ -643,15 +645,13 @@ gitalk:
   enable: true
   github_id: muyuuuu
   repo: blabla
-  client_id: 639ddab88527bca5fe75
-  client_secret: 0c08625a06e8796096a190cad5c07b4909d1e960  
   admin_user: muyuuuu  
   distraction_free_mode: true 
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language: zh-CN
-
+  proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
@@ -812,7 +812,7 @@ tabs:
 # So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # See: https://github.com/theme-next/theme-next-pdf
 pdf:
-  enable: false
+  enable: true
   # Default height
   height: 500px
 
@@ -1002,3 +1002,33 @@ vendors:
 css: css
 js: js
 images: images
+
+markdown:
+  # 渲染设置
+  render:
+    # 置为true时，html内容保持不变；置为false时，html内容将被转义成普通字符串
+    html: true
+    # 是否生成与XHTML完全兼容的标签（虽然我不懂是什么意思）
+    xhtmlOut: false
+    # 置为true时，每个换行符都被渲染成一个<br>（即Hexo的默认表现）；置为false时，只有空行才会被渲染为<br>（GFM的默认表现）
+    breaks: true
+    # 是否自动识别链接并把它渲染成链接
+    linkify: true
+    # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
+    typographer: true
+    # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
+    quotes: '“”‘’'
+  # 设置所需插件
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  # 锚点设置（因为我没有尝试相关内容，所以就不翻译相关说明了）
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
